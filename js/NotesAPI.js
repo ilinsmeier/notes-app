@@ -7,11 +7,11 @@ export default class NotesAPI {
         });
     }
 
-    static saveNotes(noteToSave) {
+    static saveNote(noteToSave) {
 
     }
 
-    static deleteNotes(id) {
+    static deleteNote(id) {
 
     }
 }
