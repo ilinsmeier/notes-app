@@ -33,7 +33,7 @@ export default class NotesView {
             });
         });
 
-        // TODO: hide the note preview by default
+        this.updateNotePreviewVisibility(false);
     }
 
     // `_` denotes a private method
@@ -91,5 +91,9 @@ export default class NotesView {
         });
 
         this.root.querySelector(`.notes__list-item[data-note-id="${note.id}"]`).classList.add("notes__list-item--selected");
+    }
+
+    updateNotePreviewVisibility(visible) {
+        this.root.querySelector(".notes__preview").style.visibility = visible ? "visible" : "hidden";
     }
 }
