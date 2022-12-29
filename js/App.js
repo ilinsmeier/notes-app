@@ -20,7 +20,7 @@ export default class App {
         }
     }
 
-    _setNotes() {
+    _setNotes(notes) {
         this.notes = notes;
         this.view.updateNoteList(notes);
         this.view.updateNotePreviewVisibility(notes.length > 0);
