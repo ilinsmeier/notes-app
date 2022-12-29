@@ -40,7 +40,15 @@ export default class App {
                 // console.log("Note selected: " + noteId);
             },
             onNoteAdd: () => {
-                console.log("Note Add");
+                const newNote = {
+                    title: "New Note",
+                    body: "Take note..."
+                };
+
+                NotesAPI.saveNote(newNote);
+                this._refreshNotes();
+
+                // console.log("Note Add");
             },
             onNoteEdit: (title, body) => {
                 console.log(title, body);
