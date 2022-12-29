@@ -34,7 +34,10 @@ export default class App {
     _handlers() {
         return {
             onNoteSelect: noteId => {
-                console.log("Note selected: " + noteId);
+                const selectedNote = this.notes.find(note => note.id == noteId);
+                this._setActiveNote(selectedNote);
+
+                // console.log("Note selected: " + noteId);
             },
             onNoteAdd: () => {
                 console.log("Note Add");
