@@ -41,7 +41,7 @@ export default class NotesView {
         const MAX_BODY_LENGTH = 60;
 
         return `
-            <div class="notes__list-item" data-note-id="${id}>
+            <div class="notes__list-item" data-note-id="${id}">
                 <div class="notes__small-title">${title}</div>
                 <div class="notes__small-body">
                     ${body.substring(0, MAX_BODY_LENGTH)}
@@ -72,7 +72,7 @@ export default class NotesView {
                 this.onNoteSelect(noteListItem.dataset.noteId);
             });
 
-            noteListItem.addEventListener("dbclick", () => {
+            noteListItem.addEventListener("dblclick", () => {
                 const doDelete = confirm("Are you sure you want to delete this note?");
 
                 if (doDelete) {
