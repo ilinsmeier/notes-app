@@ -1,3 +1,12 @@
+import App from "./App.js";
+
+const root = document.getElementById("app");
+const app = new App(root);
+
+/////////////////////////////////////////////
+// Test Code 1
+/////////////////////////////////////////////
+
 // import NotesAPI from "./NotesAPI.js"
 
 // NotesAPI.saveNote({
@@ -7,27 +16,32 @@
 
 // console.log(NotesAPI.getAllNotes());
 
-import NotesView from "./NotesView.js"
-import NotesAPI from "./NotesAPI.js"
 
-const app = document.getElementById("app");
-const view = new NotesView(app, {
-    onNoteAdd() {
-        console.log("Let's add a note!");
-    },
-    onNoteSelect(id) {
-        console.log("Note Selected:" + id);
-    },
-    onNoteDelete(id) {
-        console.log("Note DELETED:" + id);
-    },
-    onNoteEdit(newTitle, newBody) {
-        console.log(newTitle);
-        console.log(newBody);
-    },
-});
+/////////////////////////////////////////////
+// Test Code 2 
+/////////////////////////////////////////////
 
-const notes = NotesAPI.getAllNotes();
+// import NotesView from "./NotesView.js"
+// import NotesAPI from "./NotesAPI.js"
 
-view.updateNoteList(notes);
-view.updateActiveNote(notes[0]);
+// const app = document.getElementById("app");
+// const view = new NotesView(app, {
+//     onNoteAdd() {
+//         console.log("Let's add a note!");
+//     },
+//     onNoteSelect(id) {
+//         console.log("Note Selected:" + id);
+//     },
+//     onNoteDelete(id) {
+//         console.log("Note DELETED:" + id);
+//     },
+//     onNoteEdit(newTitle, newBody) {
+//         console.log(newTitle);
+//         console.log(newBody);
+//     },
+// });
+
+// const notes = NotesAPI.getAllNotes();
+
+// view.updateNoteList(notes);
+// view.updateActiveNote(notes[0]);
